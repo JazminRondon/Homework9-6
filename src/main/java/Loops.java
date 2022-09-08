@@ -1,5 +1,3 @@
-import java.util.Arrays;
-
 public class Loops {
 
     //Question 1
@@ -41,17 +39,47 @@ public class Loops {
         }
         return sum / ints.length;
     }
-    //Question 8
-    public static  String extractAllOddNumbers(int[]ints){
-        String newArray = 1;
-  //      System.out.print("Extracting odd number: " + ints);
-        for (int x=1; x<= ints.length; x++) {
-            if (x % 2 != 0){
-                return
+    //Question 8(another attempt)
+//    public static int[] extractAllOddNumbers(int[]ints) {
+//    int numberOdds = 0;
+//        for(int x= 0; x <ints.length; x++){
+//        if(x % 2 ==0){
+//            numberOdds ++;
+//        }
+//    }
+//    int[] odds= new int[numberOdds];
+//    int count = 0;
+//        for (int x = 1; x<ints.length; x++){
+//        if (ints[x] % 2 ==1){
+//            odds[count] = ints[x];
+//            count++;
+//        }
+//        return odd;
+//    }
 
-            }
+    //Question 8
+    //casting
+//    public static  String extractAllOddNumbers(int[]ints) {
+//        //     String newArray = 1;
+//        int x = 0;
+//        int[] newArray = new int[4];
+//        //      System.out.print("Extracting odd number: " + ints);
+//        for (x = 0; x <= ints.length; x++) {
+//            if (x % 2 != 0) {
+//                x++;
+//            }
+//        }
+//          return ints[x];
+//    }
+    //Question 9
+    public static String extraAllEvenNumber(int[]ints){
+        
+
         }
+
+        return null;
     }
+
     public static void main(String[] args) {
         String[] names = {"Jazmin", "Nate", "Chole", "Mike"};
         int[] ints = {5, 6, 10, 12};
