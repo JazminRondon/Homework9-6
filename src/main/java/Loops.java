@@ -1,3 +1,4 @@
+
 public class Loops {
 
     //Question 1
@@ -40,45 +41,49 @@ public class Loops {
         return sum / ints.length;
     }
     //Question 8(another attempt)
-//    public static int[] extractAllOddNumbers(int[]ints) {
-//    int numberOdds = 0;
-//        for(int x= 0; x <ints.length; x++){
-//        if(x % 2 ==0){
-//            numberOdds ++;
-//        }
-//    }
-//    int[] odds= new int[numberOdds];
-//    int count = 0;
-//        for (int x = 1; x<ints.length; x++){
-//        if (ints[x] % 2 ==1){
-//            odds[count] = ints[x];
-//            count++;
-//        }
-//        return odd;
-//    }
-
-    //Question 8
-    //casting
-//    public static  String extractAllOddNumbers(int[]ints) {
-//        //     String newArray = 1;
-//        int x = 0;
-//        int[] newArray = new int[4];
-//        //      System.out.print("Extracting odd number: " + ints);
-//        for (x = 0; x <= ints.length; x++) {
-//            if (x % 2 != 0) {
-//                x++;
-//            }
-//        }
-//          return ints[x];
-//    }
-    //Question 9
-    public static String extraAllEvenNumber(int[]ints){
-        
-
+    public static String extractAllOddNumbers(int[] numbers) {
+        String odd =" ";
+        for (int i = 0; i < numbers.length; i++) {
+            if(numbers[i]%2!=0){
+                return String.valueOf((numbers[i]));
+            }
         }
-
         return null;
     }
+    //Question 9
+    public static String extractAllEvenNumbers(int[] numbers) {
+        //      int number=0;
+        String even = " ";
+        for (int i = 0; i < numbers.length; i++) {
+            if(numbers[i]%2==0){
+                even+= numbers[i]+" ";
+            }
+        }
+        return even;
+    }
+    //   Question 10
+    public static boolean contains(String[] names, String element) {
+        for(int x=0;x<names.length;x++){
+            if(names[x]==element){
+                return true;
+            }
+        }
+        return false;
+    }
+    //   Question 11
+    public static int getIndexByElement(String[] names, String element) {
+        int i=0;
+
+        for( int x =0; x<names.length;x++) {
+            if (names[x] == element) {
+                //              x=i;
+            }
+            x=i;
+        }
+
+        return i;
+    }
+
 
     public static void main(String[] args) {
         String[] names = {"Jazmin", "Nate", "Chole", "Mike"};
@@ -90,6 +95,9 @@ public class Loops {
         System.out.println(getSecondToLastElement(names));
         System.out.println(getSum(ints));
         System.out.println(getAverage(ints));
-        System.out.print("Extracting odd number: " + ints);
+        System.out.println("Extracting odd number: " + extractAllOddNumbers(ints));
+        System.out.println("The even numbers: " + extractAllEvenNumbers(ints));
+        System.out.println(contains(names,"Chloe"));
+        System.out.println(getIndexByElement(names,"Nate"));
     }
 }
